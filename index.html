@@ -10,11 +10,24 @@
   <body class="my-12 bg-gray-100 text-gray-800">
     <h1 class="font-display font-bold text-4xl text-center mb-6 md:text-6xl">Infinite Picture Scroll</h1>
     <main class="container">
-      <div id="img-wrapper" class="max-w-xl mx-auto space-y-6"></div>
+      <div class="max-w-xl mx-auto">
+        <form action="#" class="flex">
+          <input
+            type="text"
+            class="input border-0 px-4 flex-1 rounded-l-3xl"
+            placeholder="Search images... Ex: architecture"
+          />
+          <button type="submit" class="btn rounded-r-3xl bg-green-500 text-gray-50">
+            <ion-icon name="rocket" size="small"></ion-icon>
+          </button>
+        </form>
+        <div id="img-wrapper" class="flex flex-col gap-y-2"></div>
+      </div>
     </main>
-    <div id="loader" class="loader">
+    <div id="loader" class="loader opacity-0 invisible">
       <img src="img/loader.svg" alt="Loading" />
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script type="module" src="main.js"></script>
   </body>
 </html>

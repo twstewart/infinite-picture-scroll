@@ -7,8 +7,14 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Infinite Picture Scroll</title>
   </head>
-  <body>
-    <h1>Infinite Picture Scroll</h1>
+  <body class="my-12 bg-gray-100 text-gray-800">
+    <h1 class="font-display font-bold text-4xl text-center mb-6 md:text-6xl">Infinite Picture Scroll</h1>
+    <main class="container">
+      <div id="img-wrapper" class="max-w-xl mx-auto space-y-6"></div>
+    </main>
+    <div id="loader" class="loader">
+      <img src="img/loader.svg" alt="Loading" />
+    </div>
     <script type="module" src="main.js"></script>
   </body>
 </html>

@@ -25,8 +25,10 @@ async function handleSubmit(e) {
     return;
   }
 
-  fetchPhotos(endpoint, query);
+  showLoader();
   form.reset();
+
+  fetchPhotos(endpoint, query);
 }
 
 function handleScroll(_e) {
@@ -45,6 +47,7 @@ async function fetchPhotos(endpoint, query) {
       throw new Error("Invalid search... please try again");
     }
 
+    hideLoader();
     displayPhotos(data);
   } catch (error) {
     alert(error.message);
@@ -80,5 +83,15 @@ function imageLoaded() {
 function setAttrs(el, attrs) {
   for (const prop in attrs) {
     el.setAttribute(prop, attrs[prop]);
+  }
+}
+
+function showLoader() {
+  loaderEl.hidden = false;
+}
+
+function hideLoader() {
+  if (!loaderEl.hidden) {
+    loaderEl.hidden = true;
   }
 }

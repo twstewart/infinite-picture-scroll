@@ -10,10 +10,11 @@
   <body class="my-12 bg-gray-100 text-gray-800">
     <h1 class="font-display font-bold text-4xl text-center mb-6 md:text-6xl">Infinite Picture Scroll</h1>
     <main class="container">
-      <div class="max-w-xl mx-auto">
-        <form action="#" class="flex">
+      <div class="max-w-xl mx-auto space-y-5">
+        <form action="#" id="form" class="flex">
           <input
             type="text"
+            name="query"
             class="input border-0 px-4 flex-1 rounded-l-3xl"
             placeholder="Search images... Ex: architecture"
           />
@@ -21,7 +22,7 @@
             <ion-icon name="rocket" size="small"></ion-icon>
           </button>
         </form>
-        <div id="img-wrapper" class="flex flex-col gap-y-2"></div>
+        <div id="img-wrapper" class="flex flex-col gap-y-5"></div>
       </div>
     </main>
     <div id="loader" class="loader opacity-0 invisible">
